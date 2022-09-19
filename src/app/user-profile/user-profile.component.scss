@@ -1,0 +1,24 @@
+:host {
+  display: grid;
+  width: 600px;
+  margin: auto;
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}

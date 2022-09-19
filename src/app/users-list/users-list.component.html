@@ -1,0 +1,25 @@
+<mat-card [routerLink]="['/user', user.id.value]" *ngFor="let user of users" class="example-card">
+  <mat-card-header>
+    <img mat-card-avatar class="example-header-image" src="{{user.picture.thumbnail}}">
+    <mat-card-title>{{user.name.first}} {{user.name.last}}</mat-card-title>
+    <mat-card-subtitle>{{user.location.state}}, {{user.location.country}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{user.picture.large}} alt="Photo of a {{user.name.first}}">
+  <mat-card-content>
+    <div class="center-items">
+      <span>
+        <mat-icon fontIcon="mail">
+        </mat-icon>
+      </span>
+      <span>{{user.email}}</span>
+    </div>
+    <div class="center-items">
+      <span>
+        <mat-icon fontIcon="phone">
+        </mat-icon>
+      </span>
+      <span>{{user.phone}}</span>
+    </div>
+  </mat-card-content>
+
+</mat-card>
