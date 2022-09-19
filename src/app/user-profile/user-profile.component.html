@@ -1,23 +1,37 @@
-<div class="profile" *ngIf="user">
-  <div class="profile-image">
-    <img src="{{ user.picture.large }}" />
+<ng-container *ngIf="user">
+  <div class="profile">
+    <div class="profile-image">
+      <img src="{{ user.picture.large }}" />
+    </div>
+    <div>
+      <div class="name">{{ user.name.first }} {{ user.name.last }}</div>
+      <div class="center-items">
+        <mat-icon fontIcon="location_on">
+        </mat-icon>
+        <div>{{user.location.state}}, {{user.location.country}}</div>
+      </div>
+      <div class="center-items">
+        <mat-icon fontIcon="mail">
+        </mat-icon>
+        <div>{{user.email}}</div>
+      </div>
+      <div class="center-items">
+        <mat-icon fontIcon="phone">
+        </mat-icon>
+        <div>{{user.phone}}</div>
+      </div>
+      <div class="center-items">
+        <mat-icon fontIcon="cake">
+        </mat-icon>
+        <div>{{user.dob.date | date: 'medium'}}</div>
+      </div>
+      <div class="center-items">
+        <mat-icon fontIcon="wc">
+        </mat-icon>
+        <div>{{user.gender}}</div>
+      </div>
+    </div>
   </div>
-  <div>
-    <div class="name">{{ user.name.first }} {{ user.name.last }}</div>
-    <div class="center-items">
-      <mat-icon fontIcon="location_on">
-      </mat-icon>
-      <div>{{user.location.state}}, {{user.location.country}}</div>
-    </div>
-    <div class="center-items">
-      <mat-icon fontIcon="mail">
-      </mat-icon>
-      <div>{{user.email}}</div>
-    </div>
-    <div class="center-items">
-      <mat-icon fontIcon="phone">
-      </mat-icon>
-      <div>{{user.phone}}</div>
-    </div>
-  </div>
-</div>
+  <hr>
+
+</ng-container>
